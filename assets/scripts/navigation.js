@@ -34,11 +34,10 @@ var NV_expand = function(){
     $("#fixedmenu ul").css("display", "block");
     isTopPage = true;
     isNavDisplayed = true;
+    d.resolve();
+
+    return d.promise();
   }
-  
-  d.resolve();
-  
-  return d.promise();
 };
 
 function adjustNav(){
