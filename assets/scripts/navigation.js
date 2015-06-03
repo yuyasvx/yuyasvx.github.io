@@ -5,7 +5,6 @@ var isNavDisplayed = true;
 
 var navHeight = $("#fixedmenu").height();
 var logobtnHeight = $(".svxlogobox").eq(0).height();
-console.log("logobtnHeight" + logobtnHeight);
 
 $("#fixedmenu").css("height", navHeight + "px");
 
