@@ -3,7 +3,7 @@
 var isTopPage = false;
 var isNavDisplayed = true;
 var isHome = true;
-if ($('body').data('is-home') == "false" || $('body').data('is-home') == undefined) {
+if ($('body').data('is-home') == false || $('body').data('is-home') == undefined) {
   isHome = false;
 }
 
