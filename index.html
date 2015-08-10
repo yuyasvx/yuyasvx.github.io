@@ -7,8 +7,15 @@
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
   <link rel="stylesheet" href="assets/style/global.css">
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="assets/scripts/loader.js"></script>
 </head>
 <body>
+  <div id="loadingscreen" style="display: none">
+  LOADING ...
+  </div>
+  <script>
+    document.getElementById("loadingscreen").removeAttribute("style");
+  </script>
   <div id="w">
     <nav id="titlebar" class="clearfix">
       <div id="logobutton">SVG画像</div>
