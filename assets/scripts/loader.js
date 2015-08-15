@@ -6,5 +6,12 @@ function eraseLoadScreen() {
 }
 
 $(document).ready(function(){
-  eraseLoadScreen();
+  var df = new $.Deferred();
+  
+  $.when(initsvx()).done(function(){
+    eraseLoadScreen();
+    df.resolve();
+  });
+  
+  return df.promise();
 });
