@@ -1,0 +1,85 @@
+$articleWidth: 270px;
+
+#box-articles {
+  width: ($articleWidth + 40) * 4;
+  margin: 0 auto;
+  padding-left: 40px;
+
+  article.thumbnail {
+    width: $articleWidth;
+    height: $articleWidth;
+    display: block;
+    float: left;
+    background: #ddd;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    position: relative;
+
+    .link_button {
+      width: $articleWidth;
+      height: $articleWidth;
+      position: absolute;
+      top: 0px;
+      z-index: 2;
+      white-space: nowrap;
+      text-indent: 100%;
+      overflow: hidden;
+    }
+
+    .coverimg {
+      @include filter(grayscale(100%) contrast(50%) brightness(180%));
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 120px;
+    }
+
+    .cover {
+      width: $articleWidth;
+      height: 120px;
+      position: relative;
+
+      h1 {
+        font-family: SourceHanSans-Bold;
+        @include font-smoothing(antialiased);
+        font-size: 20px;
+        color: #000000;
+        letter-spacing: -1px;
+        line-height: 1.1;
+        display: block;
+        position: absolute;
+        bottom: -1px;
+
+        a {
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+    }
+
+    $padding: 20px;
+    .article-information {
+      background: #000000;
+      color: #FFFFFF;
+      height: 150px - $padding - $padding;
+      padding: $padding;
+      position: relative;
+    }
+
+    h2 {
+      font-size: 15px;
+      font-weight: bold;
+
+    }
+
+    .category {
+      position: absolute;
+      bottom: 20px;
+      font-size: 15px;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+@import "compass";
+@import "../variables";
+@import "../css-properties";
+@import "../mixins";
+
+header {
+  background: #000;
+  color: #FFFFFF;
+  display: block;
+  height: 120px;
+  margin-bottom: 40px;
+
+  #box-header {
+    width: 1200px;
+    margin: 0px auto;
+  }
+
+  #logo {
+    width: 270px;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    float: left;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      // white-space: nowrap;
+      // text-indent: 100%;
+
+      &:hover {
+        background: #444;
+      }
+    }
+  }
+
+  $navHeight: 60px;
+  nav {
+    ul {
+      // @include edgefont(24px);
+      font-family: $default-font;
+      font-size: 16px;
+      font-weight: 600;
+      font-style: italic;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0 0;
+      float: left;
+
+      li {
+        padding: 0;
+        margin: 0;
+        float: left;
+        // border-left: 1px solid #FFF;
+
+        a {
+          display: block;
+          padding: 0 10px;
+          color: #FFFFFF;
+          text-decoration: none;
+          height: $navHeight;
+          line-height: $navHeight;
+
+          &:hover {
+            background: #444;
+          }
+        }
+      }
+    }
+  }
+}
+
+$articleWidth: 270px;
+
+#box-articles {
+  width: ($articleWidth + 40) * 4;
+  margin: 0 auto;
+  padding-left: 40px;
+
+  article.thumbnail {
+    width: $articleWidth;
+    height: $articleWidth;
+    display: block;
+    float: left;
+    background: #ddd;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    position: relative;
+
+    .link_button {
+      width: $articleWidth;
+      height: $articleWidth;
+      position: absolute;
+      top: 0px;
+      z-index: 2;
+      white-space: nowrap;
+      text-indent: 100%;
+      overflow: hidden;
+    }
+
+    .coverimg {
+      @include filter(grayscale(100%) contrast(50%) brightness(180%));
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 120px;
+    }
+
+    .cover {
+      width: $articleWidth;
+      height: 120px;
+      position: relative;
+
+      h1 {
+        font-family: SourceHanSans-Bold;
+        @include font-smoothing(antialiased);
+        font-size: 20px;
+        color: #000000;
+        letter-spacing: -1px;
+        line-height: 1.1;
+        display: block;
+        position: absolute;
+        bottom: -1px;
+
+        a {
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+    }
+
+    $padding: 20px;
+    .article-information {
+      background: #000000;
+      color: #FFFFFF;
+      height: 150px - $padding - $padding;
+      padding: $padding;
+      position: relative;
+    }
+
+    h2 {
+      font-size: 15px;
+      font-weight: bold;
+
+    }
+
+    .other_info {
+      position: absolute;
+      bottom: 18px;
+      font-size: 15px;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.3;
+    }
+  }
+}

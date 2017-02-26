@@ -1,0 +1,38 @@
+@import "compass";
+@import "variables";
+@import "css-properties";
+@import "mixins";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: $default-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after, .clearfix:before {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#frame {
+
+}
+
+#box-featured {
+  width: 100%;
+  height: 340px;
+  margin-bottom: 40px;
+  background: #CACACA;
+}
+
+footer {
+  border-top: 1px solid #CCC;
+  padding: 40px;
+}

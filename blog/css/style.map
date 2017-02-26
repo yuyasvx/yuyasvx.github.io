@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/style.css",
+	"sources": [
+		"../sass/style.scss"
+	],
+	"sourcesContent": [
+		"body {\n  margin: 0;\n  padding: 0;\n  font-size: 14px;\n  font-family: -apple-system, \"Helvetica Neue\", sans-serif;\n}\n\n#frame {\n  header {\n    background: #000;\n    color: #FFFFFF;\n    display: block;\n    height: 120px;\n\n    #box-header {\n      width: 1200px;\n      margin: 0px auto;\n    }\n    #logo {\n      display: block;\n    }\n    nav {\n\n    }\n  }\n}\n"
+	],
+	"mappings": ";AAAA,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,CAAE;EACX,SAAS,EAAE,IAAK;EAChB,WAAW,EAAE,2CAA4C;CAC1D;;;AAED,AACE,MADI,CACJ,MAAM,CAAC;EACL,UAAU,EAAE,IAAK;EACjB,KAAK,EAAE,OAAQ;EACf,OAAO,EAAE,KAAM;EACf,MAAM,EAAE,KAAM;CAYf;;;AAjBH,AAOI,MAPE,CACJ,MAAM,CAMJ,WAAW,CAAC;EACV,KAAK,EAAE,MAAO;EACd,MAAM,EAAE,QAAS;CAClB;;;AAVL,AAWI,MAXE,CACJ,MAAM,CAUJ,KAAK,CAAC;EACJ,OAAO,EAAE,KAAM;CAChB",
+	"names": []
+}
