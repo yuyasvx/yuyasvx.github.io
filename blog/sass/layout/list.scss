@@ -12,6 +12,9 @@ header {
 
   #box-header {
     width: 1200px;
+    @media only screen and (min-width:1024px) and (max-width:1279px) {
+      width: 1024px - 80;
+    }
     margin: 0px auto;
   }
 
@@ -71,16 +74,23 @@ header {
   }
 }
 
-$articleWidth: 270px;
+$articleWidthDesktop: 270px;
+$articleWidthMiniDesktop: 288px;
 
 #box-articles {
-  width: ($articleWidth + 40) * 4;
+  width: ($articleWidthDesktop + 40) * 4;
+  @media only screen and (min-width:1024px) and (max-width:1279px) {
+    width: ($articleWidthMiniDesktop + 40) * 3;
+  }
   margin: 0 auto;
   padding-left: 40px;
 
   article.thumbnail {
-    width: $articleWidth;
-    height: $articleWidth;
+    width: $articleWidthDesktop;
+    @media only screen and (min-width:1024px) and (max-width:1279px) {
+      width: $articleWidthMiniDesktop;
+    }
+    height: $articleWidthDesktop;
     display: block;
     float: left;
     background: #ddd;
@@ -89,8 +99,11 @@ $articleWidth: 270px;
     position: relative;
 
     .link_button {
-      width: $articleWidth;
-      height: $articleWidth;
+      width: $articleWidthDesktop;
+      @media only screen and (min-width:1024px) and (max-width:1279px) {
+        width: $articleWidthMiniDesktop;
+      }
+      height: $articleWidthDesktop;
       position: absolute;
       top: 0px;
       z-index: 2;
@@ -109,7 +122,10 @@ $articleWidth: 270px;
     }
 
     .cover {
-      width: $articleWidth;
+      width: $articleWidthDesktop;
+      @media only screen and (min-width:1024px) and (max-width:1279px) {
+        width: $articleWidthMiniDesktop;
+      }
       height: 120px;
       position: relative;
 

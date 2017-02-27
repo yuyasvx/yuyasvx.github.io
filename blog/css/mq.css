@@ -1,0 +1,17 @@
+@media only screen and (min-width: 1024) and (max-width: 1279px) {
+  header #box-header {
+    width: 800px;
+  }
+  #box-articles {
+    width: 1312px;
+  }
+  #box-articles article.thumbnail {
+    width: 288px;
+  }
+  #box-articles article.thumbnail .link_button {
+    width: 288px;
+  }
+  #box-articles article.thumbnail .cover {
+    width: 288px;
+  }
+}

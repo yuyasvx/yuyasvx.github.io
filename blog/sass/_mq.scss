@@ -1,0 +1,6 @@
+$type: desktop miniDesktop tablet phone;
+
+@media only screen and (min-width:1024px) and (max-width:1279px) {
+    $type: miniDesktop;
+    @import "layout/_list-mq";
+}

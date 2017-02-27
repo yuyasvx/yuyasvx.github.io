@@ -1,1 +1,141 @@
-header{width:100%;background:transparent;color:#FFFFFF;display:block;height:60px;margin:0;z-index:2;position:absolute;top:0px}header #box-header{width:1200px;margin:0px auto;padding:0 40px}header #logo{width:270px;height:60px;display:block;overflow:hidden;float:left}header #logo a{display:block;width:100%;height:100%}header #logo a:hover{background:#444}header nav ul{font-family:"Fira Sans","Helvetica Neue",YuGo-Medium,YuGothic-Regular,Meiryo,sans-serif;font-size:16px;font-weight:600;font-style:italic;list-style:none;padding:0;margin:0 0 0 0;float:left}header nav ul li{padding:0;margin:0;float:left}header nav ul li a{display:block;padding:0 10px;color:#FFFFFF;text-decoration:none;height:60px;line-height:60px}header nav ul li a:hover{background:#444}article#single_article{width:100%;top:0px;z-index:1}.frame-frontmatter{height:390px;width:100%;background:#000;color:#FFFFFF;margin:0 0 40px 0;padding:60px 0 0 0}.frame-frontmatter a{color:#FFFFFF;text-decoration:none}.frame-frontmatter a:hover{border-bottom:2px solid #FFFFFF}.frame-frontmatter .box-frontmatter{width:1200px;height:350px;margin:40px auto 0 auto;padding:0 40px;position:relative}.frame-frontmatter .box-frontmatter h1{display:block;width:890px;font-family:"Fira Sans", SourceHanSans-Regular, sans-serif;font-size:40px;letter-spacing:-2.5px;line-height:46px}.frame-frontmatter .box-frontmatter .article-information{position:absolute;bottom:40px}.frame-frontmatter .box-frontmatter .article-information .category{font-family:"Fira Sans";font-size:30px;font-style:italic;margin:0 0 10px 0}.frame-frontmatter .box-frontmatter .article-information .category .main_category{font-weight:bold}.frame-frontmatter .box-frontmatter .article-information .tags{margin-bottom:15px}.frame-frontmatter .box-frontmatter .article-information .tags .tag{display:block;float:left;margin-right:20px}.frame-frontmatter .box-frontmatter .article-information .postdate{font-family:"Fira Sans";font-style:italic;font-weight:500;font-size:20px;letter-spacing:-0.67px}
+header {
+  width: 100%;
+  background: transparent;
+  color: #FFFFFF;
+  display: block;
+  height: 60px;
+  margin: 0;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+}
+
+header #box-header {
+  width: 1200px;
+  margin: 0px auto;
+  padding: 0 40px;
+}
+
+header #logo {
+  width: 270px;
+  height: 60px;
+  display: block;
+  overflow: hidden;
+  float: left;
+}
+
+header #logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+header #logo a:hover {
+  background: #444;
+}
+
+header nav ul {
+  font-family: "Fira Sans", "Helvetica Neue", YuGo-Medium, YuGothic-Regular, Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: italic;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  float: left;
+}
+
+header nav ul li {
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+header nav ul li a {
+  display: block;
+  padding: 0 10px;
+  color: #FFFFFF;
+  text-decoration: none;
+  height: 60px;
+  line-height: 60px;
+}
+
+header nav ul li a:hover {
+  background: #444;
+}
+
+article#single_article {
+  width: 100%;
+  top: 0px;
+  z-index: 1;
+}
+
+.frame-frontmatter {
+  height: 390px;
+  width: 100%;
+  background: #000;
+  color: #FFFFFF;
+  margin: 0 0 40px 0;
+  padding: 60px 0 0 0;
+}
+
+.frame-frontmatter a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.frame-frontmatter a:hover {
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.frame-frontmatter .box-frontmatter {
+  width: 1200px;
+  height: 350px;
+  margin: 40px auto 0 auto;
+  padding: 0 40px;
+  position: relative;
+}
+
+.frame-frontmatter .box-frontmatter h1 {
+  display: block;
+  width: 890px;
+  font-family: "Fira Sans", SourceHanSans-Regular, sans-serif;
+  font-size: 40px;
+  letter-spacing: -2.5px;
+  line-height: 46px;
+}
+
+.frame-frontmatter .box-frontmatter .article-information {
+  position: absolute;
+  bottom: 40px;
+}
+
+.frame-frontmatter .box-frontmatter .article-information .category {
+  font-family: "Fira Sans";
+  font-size: 30px;
+  font-style: italic;
+  margin: 0 0 10px 0;
+}
+
+.frame-frontmatter .box-frontmatter .article-information .category .main_category {
+  font-weight: bold;
+}
+
+.frame-frontmatter .box-frontmatter .article-information .tags {
+  margin-bottom: 15px;
+}
+
+.frame-frontmatter .box-frontmatter .article-information .tags .tag {
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+
+.frame-frontmatter .box-frontmatter .article-information .postdate {
+  /* 2.26.2017 7:05 PM: */
+  font-family: "Fira Sans";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.67px;
+}
