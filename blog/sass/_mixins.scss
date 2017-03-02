@@ -1,6 +1,0 @@
-@mixin edgefont($fontsize) {
-  font-size: $fontsize;
-  line-height: $fontsize;
-  font-family: edge;
-  @include font-smoothing(antialiased);
-}

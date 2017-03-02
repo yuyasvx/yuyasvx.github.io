@@ -17,6 +17,12 @@ header #box-header {
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header #box-header {
+    width: 688px;
+  }
+}
+
 header #logo {
   width: 270px;
   height: 60px;
@@ -77,6 +83,12 @@ header nav ul li a:hover {
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #box-articles {
+    width: 728px;
+  }
+}
+
 #box-articles article.thumbnail {
   width: 270px;
   height: 270px;
@@ -94,6 +106,12 @@ header nav ul li a:hover {
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #box-articles article.thumbnail {
+    width: 324px;
+  }
+}
+
 #box-articles article.thumbnail .link_button {
   width: 270px;
   height: 270px;
@@ -108,6 +126,12 @@ header nav ul li a:hover {
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
   #box-articles article.thumbnail .link_button {
     width: 288px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #box-articles article.thumbnail .link_button {
+    width: 324px;
   }
 }
 
@@ -131,6 +155,12 @@ header nav ul li a:hover {
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
   #box-articles article.thumbnail .cover {
     width: 288px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #box-articles article.thumbnail .cover {
+    width: 324px;
   }
 }
 
