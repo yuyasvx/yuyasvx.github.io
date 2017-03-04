@@ -338,7 +338,8 @@ header nav ul li a:hover {
 }
 
 #box-articles article.thumbnail .cover h1 {
-  font-family: SourceHanSans-Bold;
+  font-family: SourceHanSans-Regular, "source-han-sans-japanese", sans-serif;
+  font-weight: 600;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
