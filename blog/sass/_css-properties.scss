@@ -1,0 +1,14 @@
+@mixin font-smoothing($value) {
+  @if $value == antialiased or $value == grayscale {
+    font-smooth: always;
+    -webkit-font-smoothing: $value;
+    -moz-osx-font-smoothing: grayscale;
+  } @else if $value == subpixel-antialiased {
+    font-smooth: always;
+    -webkit-font-smoothing: $value;
+  } @else if $value == none {
+    font-smooth: never;
+    -webkit-font-smoothing: $value;
+    -moz-osx-font-smoothing: unset;
+  }
+}

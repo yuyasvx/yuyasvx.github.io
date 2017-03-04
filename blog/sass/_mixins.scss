@@ -1,0 +1,17 @@
+@mixin edgefont($fontsize) {
+  font-size: $fontsize;
+  line-height: $fontsize;
+  font-family: edge;
+  @include font-smoothing(antialiased);
+}
+
+$small:  "only screen and (max-width:640px)";
+$middle: "only screen and (min-width:641px) and (max-width:959px)";
+$large:  "only screen and (min-width:960px)";
+// @mixin
+
+@mixin media($range) {
+  @media #{$range} {
+    @content;
+  }
+}
