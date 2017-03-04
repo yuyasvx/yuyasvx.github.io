@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  font-family: "Fira Sans", "Helvetica Neue", YuGo-Medium, YuGothic-Regular, Meiryo, sans-serif;
+  font-family: "Fira Sans", "Helvetica Neue", YuGo-Medium, YuGothic-Regular, "Hiragino Sans", "HiraKakuProN-W3" Meiryo, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
