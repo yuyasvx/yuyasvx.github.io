@@ -35,7 +35,7 @@
 
 #single_article .frame-body .box-body h2 {
   /* 大見出し（H2）は段組からはみ出る。幅は: */
-  font-family: SourceHanSans-Regular "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
+  font-family: "source-han-sans-japanese", SourceHanSans-Regular, "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
   font-weight: bold;
   font-size: 25px;
   margin: 0 0 40px 40px;
@@ -44,7 +44,7 @@
 
 #single_article .frame-body .box-body h3 {
   /* 大見出し（H2）は段組からはみ出る。幅は: */
-  font-family: "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
+  font-family: "source-han-sans-japanese", "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
   font-weight: normal;
   font-size: 20px;
   margin: 0 0 20px 40px;

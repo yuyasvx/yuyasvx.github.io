@@ -99,7 +99,7 @@ article#single_article {
 .frame-frontmatter .box-frontmatter h1 {
   display: block;
   width: 890px;
-  font-family: "Fira Sans", SourceHanSans-Regular, sans-serif;
+  font-family: "Fira Sans", "source-han-sans-japanese", SourceHanSans-Regular, sans-serif;
   font-size: 40px;
   letter-spacing: -2.5px;
   line-height: 46px;
