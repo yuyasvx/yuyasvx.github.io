@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   background: #000;
   color: #FFFFFF;
@@ -61,7 +62,7 @@ header #logo {
   header #logo {
     width: 180px;
     height: 40px;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 20px;
   }
   header #logo img {
     width: auto;
@@ -92,7 +93,7 @@ header #logo a:hover {
 }
 
 header nav ul {
-  font-family: "Fira Sans", "Helvetica Neue", YuGo-Medium, YuGothic-Regular, "Hiragino Sans", "HiraKakuProN-W3" Meiryo, sans-serif;
+  font-family: "Fira Sans", "Helvetica Neue", "游ゴシック体", "游ゴシック", "Hiragino Sans", "HiraKakuProN-W3", Meiryo, sans-serif;
   font-size: 16px;
   font-weight: 600;
   font-style: italic;

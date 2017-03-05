@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   width: 100%;
   background: transparent;
@@ -10,10 +11,50 @@ header {
   top: 0px;
 }
 
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  header {
+    height: 40px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  header {
+    height: 40px;
+  }
+}
+
 header #box-header {
   width: 1200px;
   margin: 0px auto;
   padding: 0 40px;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  header #box-header {
+    width: 944px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header #box-header {
+    width: 688px;
+  }
+}
+
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  header #box-header {
+    width: auto;
+    height: auto;
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  header #box-header {
+    width: auto;
+    height: auto;
+    padding: 0 10px;
+  }
 }
 
 header #logo {
@@ -22,6 +63,28 @@ header #logo {
   display: block;
   overflow: hidden;
   float: left;
+}
+
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  header #logo {
+    width: 180px;
+    height: 40px;
+  }
+  header #logo img {
+    width: auto;
+    height: 40px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  header #logo {
+    width: 180px;
+    height: 40px;
+  }
+  header #logo img {
+    width: auto;
+    height: 40px;
+  }
 }
 
 header #logo a {
@@ -35,7 +98,7 @@ header #logo a:hover {
 }
 
 header nav ul {
-  font-family: "Fira Sans", "Helvetica Neue", YuGo-Medium, YuGothic-Regular, "Hiragino Sans", "HiraKakuProN-W3" Meiryo, sans-serif;
+  font-family: "Fira Sans", "Helvetica Neue", "游ゴシック体", "游ゴシック", "Hiragino Sans", "HiraKakuProN-W3", Meiryo, sans-serif;
   font-size: 16px;
   font-weight: 600;
   font-style: italic;
@@ -43,6 +106,7 @@ header nav ul {
   padding: 0;
   margin: 0 0 0 0;
   float: left;
+  display: none;
 }
 
 header nav ul li {
@@ -79,6 +143,20 @@ article#single_article {
   padding: 60px 0 0 0;
 }
 
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  .frame-frontmatter {
+    padding: 40px 0 0 0;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  .frame-frontmatter {
+    padding: 40px 0 0 0;
+    height: auto;
+  }
+}
+
 .frame-frontmatter a {
   color: #FFFFFF;
   text-decoration: none;
@@ -96,6 +174,36 @@ article#single_article {
   position: relative;
 }
 
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .frame-frontmatter .box-frontmatter {
+    width: 944px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .frame-frontmatter .box-frontmatter {
+    width: 688px;
+  }
+}
+
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  .frame-frontmatter .box-frontmatter {
+    margin: 20px auto 0 auto;
+    padding: 0 20px 0 20px;
+    width: auto;
+    height: 240px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  .frame-frontmatter .box-frontmatter {
+    margin: 20px auto 0 auto;
+    padding: 0 10px 0 10px;
+    width: auto;
+    height: 240px;
+  }
+}
+
 .frame-frontmatter .box-frontmatter h1 {
   display: block;
   width: 890px;
@@ -103,6 +211,40 @@ article#single_article {
   font-size: 40px;
   letter-spacing: -2.5px;
   line-height: 46px;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .frame-frontmatter .box-frontmatter h1 {
+    width: 616px;
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .frame-frontmatter .box-frontmatter h1 {
+    width: 688px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  .frame-frontmatter .box-frontmatter h1 {
+    width: auto;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  .frame-frontmatter .box-frontmatter h1 {
+    width: auto;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1px;
+  }
 }
 
 .frame-frontmatter .box-frontmatter .subtitle {
@@ -113,6 +255,20 @@ article#single_article {
 .frame-frontmatter .box-frontmatter .article-information {
   position: absolute;
   bottom: 40px;
+}
+
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  .frame-frontmatter .box-frontmatter .article-information {
+    position: absolute;
+    bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  .frame-frontmatter .box-frontmatter .article-information {
+    position: absolute;
+    bottom: 20px;
+  }
 }
 
 .frame-frontmatter .box-frontmatter .article-information .category {
@@ -143,4 +299,18 @@ article#single_article {
   font-weight: 500;
   font-size: 20px;
   letter-spacing: -0.67px;
+}
+
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  .frame-frontmatter .box-frontmatter .article-information .postdate {
+    font-size: 18px;
+    letter-spacing: -0.67px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  .frame-frontmatter .box-frontmatter .article-information .postdate {
+    font-size: 18px;
+    letter-spacing: -0.67px;
+  }
 }
