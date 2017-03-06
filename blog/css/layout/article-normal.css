@@ -69,6 +69,18 @@
   line-height: 1.7;
 }
 
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  #single_article .frame-body .box-body p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  #single_article .frame-body .box-body p {
+    font-size: 12px;
+  }
+}
+
 #single_article .frame-body .box-body p b, #single_article .frame-body .box-body p strong {
   font-family: "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
   font-style: bold;
@@ -95,6 +107,22 @@
   padding: 20px 0 0 0;
 }
 
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  #single_article .frame-body .box-body h2 {
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  #single_article .frame-body .box-body h2 {
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-size: 20px;
+  }
+}
+
 #single_article .frame-body .box-body h3 {
   /* 大見出し（H2）は段組からはみ出る。幅は: */
   font-family: "source-han-sans-japanese", SourceHanSans-Regular, "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
@@ -102,6 +130,18 @@
   font-size: 20px;
   margin: 0 0 20px 0;
   padding: 0;
+}
+
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  #single_article .frame-body .box-body h3 {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  #single_article .frame-body .box-body h3 {
+    font-size: 17px;
+  }
 }
 
 #single_article .frame-body .box-body figure {
