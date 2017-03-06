@@ -1,4 +1,18 @@
 @charset "UTF-8";
+@media only screen and (min-width: 568px) and (max-width: 767px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 567px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+    font-size: 13px;
+  }
+}
+
 #single_article .frame-body {
   width: 1280px;
   margin: 0px auto;
@@ -67,18 +81,6 @@
   font-style: normal;
   color: #000000;
   line-height: 1.7;
-}
-
-@media only screen and (min-width: 568px) and (max-width: 767px) {
-  #single_article .frame-body .box-body p {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (min-width: 1px) and (max-width: 567px) {
-  #single_article .frame-body .box-body p {
-    font-size: 12px;
-  }
 }
 
 #single_article .frame-body .box-body p b, #single_article .frame-body .box-body p strong {
