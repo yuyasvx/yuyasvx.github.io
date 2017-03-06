@@ -84,7 +84,7 @@
 }
 
 #single_article .frame-body .box-body p b, #single_article .frame-body .box-body p strong {
-  font-family: "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
+  font-family: "Fira Sans", "source-han-sans-japanese", "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
   font-style: bold;
 }
 
@@ -102,7 +102,7 @@
 
 #single_article .frame-body .box-body h2 {
   /* 大見出し（H2）は段組からはみ出る。幅は: */
-  font-family: "source-han-sans-japanese", SourceHanSans-Regular, "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
+  font-family: "Fira Sans", "source-han-sans-japanese", SourceHanSans-Regular, "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
   font-weight: bold;
   font-size: 25px;
   margin: 0 0 40px 0;
@@ -127,7 +127,7 @@
 
 #single_article .frame-body .box-body h3 {
   /* 大見出し（H2）は段組からはみ出る。幅は: */
-  font-family: "source-han-sans-japanese", SourceHanSans-Regular, "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
+  font-family: "Fira Sans", "source-han-sans-japanese", SourceHanSans-Regular, "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
   font-weight: 300;
   font-size: 20px;
   margin: 0 0 20px 0;
@@ -189,7 +189,7 @@
   display: block;
   margin: 0 0 20px 0;
   padding: 20px 20px 15px 20px;
-  font-family: "source-han-sans-japanese", SourceHanSans-Regular, "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
+  font-family: "Fira Sans", "source-han-sans-japanese", SourceHanSans-Regular, "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
   font-weight: 400;
   list-style-type: square;
   background: #efefef;
