@@ -134,10 +134,15 @@ article#single_article {
   z-index: 1;
 }
 
+.layer-coverimg {
+  background-color: #000000;
+  background-size: cover;
+}
+
 .frame-frontmatter {
   height: 440px;
   width: 100%;
-  background: #000;
+  background: rgba(0, 0, 0, 0.6);
   color: #FFFFFF;
   margin: 0 0 40px 0;
   padding: 60px 0 0 0;
