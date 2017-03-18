@@ -137,6 +137,7 @@ article#single_article {
 .layer-coverimg {
   background-color: #000000;
   background-size: cover;
+  background-position: center center;
 }
 
 .frame-frontmatter {
