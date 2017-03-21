@@ -15,11 +15,9 @@
       <pubDate>Mon, 06 Mar 2017 00:17:31 +0900</pubDate>
       
       <guid>http://yuyasvx.github.io/blog/post/2017/03/make-blog-with-hugo/</guid>
-      <description>
+      <description>&lt;p&gt;私もついに重い腰を上げてブログ環境を構築したので、いろいろメモします。&lt;/p&gt;
 
-&lt;p&gt;私もついに重い腰を上げてブログ環境を構築したので、いろいろメモします。&lt;/p&gt;
-
-&lt;!-- more --&gt;
+&lt;p&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;静的サイトジェネレータとは&#34;&gt;静的サイトジェネレータとは？&lt;/h2&gt;
 
@@ -56,21 +54,21 @@
 
 &lt;p&gt;たったこれだけで Hugo 自体のインストールはおしまいです。&lt;code&gt;hugo version&lt;/code&gt;を打った後正しくバージョンが表示されたら成功です。&lt;/p&gt;
 
-&lt;h2 id=&#34;ブログを公開するまでの流れ&#34;&gt;ブログを公開するまでの流れ&lt;/h2&gt;
+&lt;h2 id=&#34;web-ページを生成するまでの流れ&#34;&gt;Web ページを生成するまでの流れ&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;サイトを定義する&lt;/li&gt;
 &lt;li&gt;テーマのダウンロード&lt;/li&gt;
 &lt;li&gt;&amp;ldquo;Config.toml&amp;rdquo; ファイルを編集し、URL・テーマ・ブログの名前・作者などのプロパティを設定&lt;/li&gt;
 &lt;li&gt;記事ファイル（Markdown によるテキスト）を新規作成し、そこに記事を書く&lt;/li&gt;
-&lt;li&gt;記事を生成する&lt;/li&gt;
+&lt;li&gt;完成版の HTML を生成する&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Hugo でできるのはここまでで、記事の公開は公開先のサービスによって違います。GitHub Pagesであれば&lt;code&gt;git push&lt;/code&gt;だし、普通のレンタルサーバーであればまた違う方法だし。このブログでは、記事の生成までを簡単にまとめておきます。&lt;/p&gt;
+&lt;p&gt;Hugo でできるのはここまでで、記事の公開方法は公開先のサービスによって違います。GitHub Pagesであれば&lt;code&gt;git push&lt;/code&gt;だし、普通のレンタルサーバーであればまた違う方法だし。このブログでは、記事の生成までを簡単にまとめておきます。&lt;/p&gt;
 
 &lt;h3 id=&#34;サイトの定義&#34;&gt;サイトの定義&lt;/h3&gt;
 
-&lt;p&gt;Hugo を始めるには、まずサイトの設定や内容を納めるた めのプロジェクトディレクトリを作成する必要があります。&lt;/p&gt;
+&lt;p&gt;Hugo を始めるには、まずサイトの設定や内容を納めるためのプロジェクトディレクトリを作成する必要があります。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ cd /path/to/ディレクトリ
 &lt;/code&gt;&lt;/pre&gt;
@@ -125,15 +123,15 @@ theme = &amp;quot;plain&amp;quot;
 HasCJKLanguage = true
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;以上の 5 つです。&lt;code&gt;baseurl&lt;/code&gt;は公開先の URL です。CSS のパスなどを、この設定に基づいて決めたりします。&lt;/p&gt;
+&lt;p&gt;以上の 5 つです。&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;languageCode&lt;/code&gt; は日本語なので&lt;code&gt;ja&lt;/code&gt;とします。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;title&lt;/code&gt;はブログ名。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;theme&lt;/code&gt;には適用したいテーマ名を入力します。&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;HasCJKLanguage&lt;/code&gt;は&lt;code&gt;true&lt;/code&gt;にしておかないと日本語の記事を投稿する際に文字数カウントがうまく働きません。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;baseurl&lt;/code&gt;には公開先の URL を設定してください。テーマの中で指定されている CSS 等のリンクなどは、この設定に基づいて決めたりします。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;languageCode&lt;/code&gt; は日本語なので&lt;code&gt;ja&lt;/code&gt;とします。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;title&lt;/code&gt;はブログ名。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;theme&lt;/code&gt;には適用したいテーマ名を入力します。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HasCJKLanguage&lt;/code&gt;は&lt;code&gt;true&lt;/code&gt;にしておかないと日本語の記事を投稿する際に文字数カウントがうまく働きません。&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;記事ファイルの生成&#34;&gt;記事ファイルの生成&lt;/h3&gt;
 
@@ -142,9 +140,11 @@ HasCJKLanguage = true
 &lt;pre&gt;&lt;code&gt;$ hugo new post/2017/01/HelloWorld.md
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;すると、&lt;code&gt;content&lt;/code&gt;ディレクトリ内に“post”, “2017”, “01”とディレクトリが生成されて“HelloWorld.md”という Markdown ファイルが出来上がったかと思います。&lt;/p&gt;
+&lt;p&gt;すると、&lt;code&gt;content&lt;/code&gt;ディレクトリ内に&lt;code&gt;post&lt;/code&gt;, &lt;code&gt;2017&lt;/code&gt;, &lt;code&gt;01&lt;/code&gt;とディレクトリが生成されて“HelloWorld.md”という Markdown ファイルが出来上がったかと思います。&lt;/p&gt;
 
 &lt;p&gt;この時、“post”に相当する部分を「セクション」と呼びます。Hugo ではセクションごとに記事を分類することができます。カテゴリやタグでも分類できますが、それらとは違い、複数のセクションを記事に設定することはできません。&lt;/p&gt;
+
+&lt;p&gt;また、上記の例のように記事ファイルを生成する際に年や月別でフォルダ分けを&lt;strong&gt;しなくても&lt;/strong&gt;、Web ページの生成時に好みのディレクトリ構成に変えたりすることができます。詳しくは別エントリで説明する予定です。&lt;/p&gt;
 
 &lt;p&gt;まあ変なことは気にせず、とりあえず“HelloWorld.md”をテキストエディタで編集してみましょう。&lt;/p&gt;
 
@@ -163,26 +163,26 @@ draft = false
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;“+++”で括られた部分は &lt;strong&gt;Frontmatter&lt;/strong&gt; と呼ばれ、記事のメタデータを表しています。見ればなんとなく察しがつくと思います。Frontmatter で定義できるものはテーマによって違います。アイキャッチ用の画像を設定できるテーマもあればそうでないものもあります。Hugo において、&lt;strong&gt;テーマはいろんな設定を司っているのです&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;“+++”で括られた部分は &lt;strong&gt;Front Matter&lt;/strong&gt; と呼ばれ、記事のメタデータを表しています。見ればなんとなく察しがつくと思います。Front Matter で定義できるものはテーマによって違います。アイキャッチ用の画像を設定できるテーマもあればそうでないものもあります。Hugo において、&lt;strong&gt;テーマはいろんな設定を司っているのです&lt;/strong&gt;。&lt;/p&gt;
 
 &lt;p&gt;複数の値を設定できるものは、&lt;code&gt;[&amp;quot;hoge&amp;quot;,&amp;quot;hoge&amp;quot;,&amp;quot;hoge&amp;quot;]&lt;/code&gt;のように配列チックに記述し、真偽値は&lt;code&gt;true&lt;/code&gt; &lt;code&gt;false&lt;/code&gt;で設定します。日付は自動で用意してくれます。&lt;/p&gt;
 
-&lt;p&gt;Frontmatter を決めたら、その下に本文を書きます。&lt;/p&gt;
+&lt;p&gt;Front Matter を決めたら、その下に本文を書きます。&lt;/p&gt;
 
 &lt;h4 id=&#34;slug-について&#34;&gt;Slug について&lt;/h4&gt;
 
-&lt;p&gt;ここで 1 つ重要ポイント。このブログ記事の URL の &lt;code&gt;make-blog-with-hugo&lt;/code&gt; にあたる部分を &lt;strong&gt;Slug&lt;/strong&gt; と言います。Hugo では、Frontmatter に &lt;code&gt;slug&lt;/code&gt; 属性が無ければ、&lt;strong&gt;ファイル名がそのまま Slug として設定&lt;/strong&gt;されます。&lt;/p&gt;
+&lt;p&gt;ここで 1 つ重要ポイント。このブログ記事の URL の &lt;code&gt;make-blog-with-hugo&lt;/code&gt; にあたる部分を &lt;strong&gt;slug&lt;/strong&gt; と言います。Hugo では、Front Matter に &lt;code&gt;slug&lt;/code&gt; 属性が無ければ、&lt;strong&gt;ファイル名がそのまま slug として設定&lt;/strong&gt;されます。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;+++
 slug = &amp;quot;this-is-slug&amp;quot;
 +++
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;ファイル名は日本語でも問題ありませんが、&lt;strong&gt;Slug を日本語で設定することはお勧めできません&lt;/strong&gt;（パーセントエンコーディングされて大変なことになります）。ファイル名と Slug は別々に設定する方が都合が良いのです。そんな時は、Archetype を改変することで、&lt;code&gt;hugo new&lt;/code&gt;で記事生成した時、常に Frontmatter に &lt;code&gt;slug&lt;/code&gt; 属性を付ける様にする事ができます。詳しいことは別エントリで記述したいと思います。&lt;/p&gt;
+&lt;p&gt;ファイル名は日本語でも問題ありませんが、&lt;strong&gt;slug を日本語で設定することはお勧めできません&lt;/strong&gt;（パーセントエンコーディングされて大変なことになります）。ファイル名と slug は別々に設定する方が都合が良いのです。そんな時は、Archetype を改変することで、&lt;code&gt;hugo new&lt;/code&gt;で記事生成した時、常に Front Matter に &lt;code&gt;slug&lt;/code&gt; 属性を付ける様にする事ができます。これも詳しいことは別エントリで記述したいと思います。&lt;/p&gt;
 
 &lt;h3 id=&#34;記事のプレビュー&#34;&gt;記事のプレビュー&lt;/h3&gt;
 
-&lt;p&gt;一通り記事を書き終えたら、保存してから次のコマンドを実行します。&lt;/p&gt;
+&lt;p&gt;一通り記事を書き終えたら、Markdown ファイルを保存してから次のコマンドを実行します。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ hugo server
 &lt;/code&gt;&lt;/pre&gt;
@@ -191,7 +191,7 @@ slug = &amp;quot;this-is-slug&amp;quot;
 
 &lt;p&gt;ただ、config.toml の変更を行っても反映されないので、その場合はサーバーを立ち上げ直すしかありません。&lt;/p&gt;
 
-&lt;p&gt;ちなみに、このコマンドでは Frontmatter の&lt;code&gt;draft&lt;/code&gt;が&lt;code&gt;true&lt;/code&gt;（下書き状態）の記事をプレビューすることはできません。&lt;/p&gt;
+&lt;p&gt;ちなみに、このコマンドでは Front Matter の&lt;code&gt;draft&lt;/code&gt;が&lt;code&gt;true&lt;/code&gt;（下書き状態）の記事をプレビューすることはできません。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ hugo server --buildDrafts
 &lt;/code&gt;&lt;/pre&gt;
@@ -207,8 +207,7 @@ slug = &amp;quot;this-is-slug&amp;quot;
 
 &lt;p&gt;これだけで完成版の HTML が生成されます。&lt;code&gt;public&lt;/code&gt;ディレクトリが新たに作成され、その中に HTML や &lt;code&gt;static&lt;/code&gt;ディレクトリに保存されたファイル等の一式が全て書き出されます。&lt;code&gt;public&lt;/code&gt;ディレクトリの中身をそのまま然るべき Web サーバーに公開して投稿作業はおしまい、ということになります。&lt;/p&gt;
 
-&lt;p&gt;超ざっくり説明するとこんなところでしょうか。とりあえず最低限の要領はつかめたかと思います。テーマによって config.toml で設定できる項目が変わる部分など割と初見殺し要素がチラチラあったりする Hugo ですが、慣れるといろんな意味で楽になるのでオススメです。&lt;/p&gt;
-</description>
+&lt;p&gt;超ざっくり説明するとこんなところでしょうか。とりあえず最低限の要領はつかめたかと思います。テーマによって config.toml で設定できる項目が変わる部分など、割と初見殺し要素がチラチラあったりする Hugo ですが、慣れるといろんな意味で楽になるし、自分がブログを更新する上で、記事にどんな属性をもたせるべきか、どんなディレクトリ構成にする必要があるのかしっかり考えることができるのでオススメです。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -217,11 +216,9 @@ slug = &amp;quot;this-is-slug&amp;quot;
       <pubDate>Sun, 05 Mar 2017 01:34:43 +0900</pubDate>
       
       <guid>http://yuyasvx.github.io/blog/post/2017/03/japanese-webfont/</guid>
-      <description>
+      <description>&lt;p&gt;ブログを0から構成し直した記念に日本語Webフォント導入してみた。主要なサービスのうち、日本語のWebフォントを配信しているものというと「FONTPLUS」、「TypeSquare」、「Typekit」、「デコもじ」がパッと思い浮かびました。ですが、デコもじに関してはまさかのサービス終了とのことで残りの3つから何がいいか選ぶことにしました。適当……。&lt;/p&gt;
 
-&lt;p&gt;ブログを0から構成し直した記念に日本語Webフォント導入してみた。主要なサービスのうち、日本語のWebフォントを配信しているものというと「FONTPLUS」、「TypeSquare」、「Typekit」、「デコもじ」がパッと思い浮かびました。ですが、デコもじに関してはまさかのサービス終了とのことで残りの3つから何がいいか選ぶことにしました。適当……。&lt;/p&gt;
-
-&lt;!-- more --&gt;
+&lt;p&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;無料版って探せばあるんだね&#34;&gt;無料版って探せばあるんだね&lt;/h2&gt;
 
@@ -267,8 +264,7 @@ slug = &amp;quot;this-is-slug&amp;quot;
 
 &lt;p&gt;自分のブログの場合、本文のみ明朝体で、見出しやナビゲーション部分にはゴシック体という割と複雑な状況になっていますが、明朝体はTypeSquare、他はTypekitで源ノ角ゴシックを使うという方法を取ることで、無料のままでいい感じにWebフォント導入できました！複数のWebフォントサービスを併用してもコンフリクトは現在起きていません。&lt;/p&gt;
 
-&lt;p&gt;しばらくはこの状態でやってみようと思います。どうせ月に1万PVなんて達成しないだろうし。&lt;/p&gt;
-</description>
+&lt;p&gt;しばらくはこの状態でやってみようと思います。どうせ月に1万PVなんて達成しないだろうし。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -277,13 +273,11 @@ slug = &amp;quot;this-is-slug&amp;quot;
       <pubDate>Mon, 27 Feb 2017 00:46:04 +0900</pubDate>
       
       <guid>http://yuyasvx.github.io/blog/post/2017/02/say-hello-to-blog-extended/</guid>
-      <description>
-
-&lt;p&gt;記念すべき1つ目のブログ投稿です。どうもこんにちは、yuyasvxです。&lt;/p&gt;
+      <description>&lt;p&gt;記念すべき1つ目のブログ投稿です。どうもこんにちは、yuyasvxです。&lt;/p&gt;
 
 &lt;p&gt;今度からはここでいろいろなこと、主に技術的なもののメモ帳を中心に、好きなものを好きなように、好きな形式で更新していこうと思います。よろしくお願いいたします！&lt;/p&gt;
 
-&lt;!-- more --&gt;
+&lt;p&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;今までしていたこと&#34;&gt;今までしていたこと&lt;/h2&gt;
 
@@ -305,8 +299,7 @@ slug = &amp;quot;this-is-slug&amp;quot;
 
 &lt;p&gt;まだデザインがまともじゃない感はちらほらありますが、ちびちび修正して完成度高めていく予定です。まずはHugoを使ったブログ更新・テーマ作成について投稿していく予定です。今度こそ本当に。&lt;/p&gt;
 
-&lt;p&gt;では。&lt;/p&gt;
-</description>
+&lt;p&gt;では。&lt;/p&gt;</description>
     </item>
     
   </channel>

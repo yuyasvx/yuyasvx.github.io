@@ -65,11 +65,9 @@
     </div>
     <section class="frame-body">
       <div class="box-body">
-        
+        <p>私もついに重い腰を上げてブログ環境を構築したので、いろいろメモします。</p>
 
-<p>私もついに重い腰を上げてブログ環境を構築したので、いろいろメモします。</p>
-
-<!-- more -->
+<p></p>
 
 <h2 id="静的サイトジェネレータとは">静的サイトジェネレータとは？</h2>
 
@@ -106,21 +104,21 @@
 
 <p>たったこれだけで Hugo 自体のインストールはおしまいです。<code>hugo version</code>を打った後正しくバージョンが表示されたら成功です。</p>
 
-<h2 id="ブログを公開するまでの流れ">ブログを公開するまでの流れ</h2>
+<h2 id="web-ページを生成するまでの流れ">Web ページを生成するまでの流れ</h2>
 
 <ul>
 <li>サイトを定義する</li>
 <li>テーマのダウンロード</li>
 <li>&ldquo;Config.toml&rdquo; ファイルを編集し、URL・テーマ・ブログの名前・作者などのプロパティを設定</li>
 <li>記事ファイル（Markdown によるテキスト）を新規作成し、そこに記事を書く</li>
-<li>記事を生成する</li>
+<li>完成版の HTML を生成する</li>
 </ul>
 
-<p>Hugo でできるのはここまでで、記事の公開は公開先のサービスによって違います。GitHub Pagesであれば<code>git push</code>だし、普通のレンタルサーバーであればまた違う方法だし。このブログでは、記事の生成までを簡単にまとめておきます。</p>
+<p>Hugo でできるのはここまでで、記事の公開方法は公開先のサービスによって違います。GitHub Pagesであれば<code>git push</code>だし、普通のレンタルサーバーであればまた違う方法だし。このブログでは、記事の生成までを簡単にまとめておきます。</p>
 
 <h3 id="サイトの定義">サイトの定義</h3>
 
-<p>Hugo を始めるには、まずサイトの設定や内容を納めるた めのプロジェクトディレクトリを作成する必要があります。</p>
+<p>Hugo を始めるには、まずサイトの設定や内容を納めるためのプロジェクトディレクトリを作成する必要があります。</p>
 
 <pre><code>$ cd /path/to/ディレクトリ
 </code></pre>
@@ -175,15 +173,15 @@ theme = &quot;plain&quot;
 HasCJKLanguage = true
 </code></pre>
 
-<p>以上の 5 つです。<code>baseurl</code>は公開先の URL です。CSS のパスなどを、この設定に基づいて決めたりします。</p>
+<p>以上の 5 つです。</p>
 
-<p><code>languageCode</code> は日本語なので<code>ja</code>とします。</p>
-
-<p><code>title</code>はブログ名。</p>
-
-<p><code>theme</code>には適用したいテーマ名を入力します。</p>
-
-<p><code>HasCJKLanguage</code>は<code>true</code>にしておかないと日本語の記事を投稿する際に文字数カウントがうまく働きません。</p>
+<ul>
+<li><code>baseurl</code>には公開先の URL を設定してください。テーマの中で指定されている CSS 等のリンクなどは、この設定に基づいて決めたりします。</li>
+<li><code>languageCode</code> は日本語なので<code>ja</code>とします。</li>
+<li><code>title</code>はブログ名。</li>
+<li><code>theme</code>には適用したいテーマ名を入力します。</li>
+<li><code>HasCJKLanguage</code>は<code>true</code>にしておかないと日本語の記事を投稿する際に文字数カウントがうまく働きません。</li>
+</ul>
 
 <h3 id="記事ファイルの生成">記事ファイルの生成</h3>
 
@@ -192,9 +190,11 @@ HasCJKLanguage = true
 <pre><code>$ hugo new post/2017/01/HelloWorld.md
 </code></pre>
 
-<p>すると、<code>content</code>ディレクトリ内に“post”, “2017”, “01”とディレクトリが生成されて“HelloWorld.md”という Markdown ファイルが出来上がったかと思います。</p>
+<p>すると、<code>content</code>ディレクトリ内に<code>post</code>, <code>2017</code>, <code>01</code>とディレクトリが生成されて“HelloWorld.md”という Markdown ファイルが出来上がったかと思います。</p>
 
 <p>この時、“post”に相当する部分を「セクション」と呼びます。Hugo ではセクションごとに記事を分類することができます。カテゴリやタグでも分類できますが、それらとは違い、複数のセクションを記事に設定することはできません。</p>
+
+<p>また、上記の例のように記事ファイルを生成する際に年や月別でフォルダ分けを<strong>しなくても</strong>、Web ページの生成時に好みのディレクトリ構成に変えたりすることができます。詳しくは別エントリで説明する予定です。</p>
 
 <p>まあ変なことは気にせず、とりあえず“HelloWorld.md”をテキストエディタで編集してみましょう。</p>
 
@@ -213,26 +213,26 @@ draft = false
 
 </code></pre>
 
-<p>“+++”で括られた部分は <strong>Frontmatter</strong> と呼ばれ、記事のメタデータを表しています。見ればなんとなく察しがつくと思います。Frontmatter で定義できるものはテーマによって違います。アイキャッチ用の画像を設定できるテーマもあればそうでないものもあります。Hugo において、<strong>テーマはいろんな設定を司っているのです</strong>。</p>
+<p>“+++”で括られた部分は <strong>Front Matter</strong> と呼ばれ、記事のメタデータを表しています。見ればなんとなく察しがつくと思います。Front Matter で定義できるものはテーマによって違います。アイキャッチ用の画像を設定できるテーマもあればそうでないものもあります。Hugo において、<strong>テーマはいろんな設定を司っているのです</strong>。</p>
 
 <p>複数の値を設定できるものは、<code>[&quot;hoge&quot;,&quot;hoge&quot;,&quot;hoge&quot;]</code>のように配列チックに記述し、真偽値は<code>true</code> <code>false</code>で設定します。日付は自動で用意してくれます。</p>
 
-<p>Frontmatter を決めたら、その下に本文を書きます。</p>
+<p>Front Matter を決めたら、その下に本文を書きます。</p>
 
 <h4 id="slug-について">Slug について</h4>
 
-<p>ここで 1 つ重要ポイント。このブログ記事の URL の <code>make-blog-with-hugo</code> にあたる部分を <strong>Slug</strong> と言います。Hugo では、Frontmatter に <code>slug</code> 属性が無ければ、<strong>ファイル名がそのまま Slug として設定</strong>されます。</p>
+<p>ここで 1 つ重要ポイント。このブログ記事の URL の <code>make-blog-with-hugo</code> にあたる部分を <strong>slug</strong> と言います。Hugo では、Front Matter に <code>slug</code> 属性が無ければ、<strong>ファイル名がそのまま slug として設定</strong>されます。</p>
 
 <pre><code>+++
 slug = &quot;this-is-slug&quot;
 +++
 </code></pre>
 
-<p>ファイル名は日本語でも問題ありませんが、<strong>Slug を日本語で設定することはお勧めできません</strong>（パーセントエンコーディングされて大変なことになります）。ファイル名と Slug は別々に設定する方が都合が良いのです。そんな時は、Archetype を改変することで、<code>hugo new</code>で記事生成した時、常に Frontmatter に <code>slug</code> 属性を付ける様にする事ができます。詳しいことは別エントリで記述したいと思います。</p>
+<p>ファイル名は日本語でも問題ありませんが、<strong>slug を日本語で設定することはお勧めできません</strong>（パーセントエンコーディングされて大変なことになります）。ファイル名と slug は別々に設定する方が都合が良いのです。そんな時は、Archetype を改変することで、<code>hugo new</code>で記事生成した時、常に Front Matter に <code>slug</code> 属性を付ける様にする事ができます。これも詳しいことは別エントリで記述したいと思います。</p>
 
 <h3 id="記事のプレビュー">記事のプレビュー</h3>
 
-<p>一通り記事を書き終えたら、保存してから次のコマンドを実行します。</p>
+<p>一通り記事を書き終えたら、Markdown ファイルを保存してから次のコマンドを実行します。</p>
 
 <pre><code>$ hugo server
 </code></pre>
@@ -241,7 +241,7 @@ slug = &quot;this-is-slug&quot;
 
 <p>ただ、config.toml の変更を行っても反映されないので、その場合はサーバーを立ち上げ直すしかありません。</p>
 
-<p>ちなみに、このコマンドでは Frontmatter の<code>draft</code>が<code>true</code>（下書き状態）の記事をプレビューすることはできません。</p>
+<p>ちなみに、このコマンドでは Front Matter の<code>draft</code>が<code>true</code>（下書き状態）の記事をプレビューすることはできません。</p>
 
 <pre><code>$ hugo server --buildDrafts
 </code></pre>
@@ -257,8 +257,7 @@ slug = &quot;this-is-slug&quot;
 
 <p>これだけで完成版の HTML が生成されます。<code>public</code>ディレクトリが新たに作成され、その中に HTML や <code>static</code>ディレクトリに保存されたファイル等の一式が全て書き出されます。<code>public</code>ディレクトリの中身をそのまま然るべき Web サーバーに公開して投稿作業はおしまい、ということになります。</p>
 
-<p>超ざっくり説明するとこんなところでしょうか。とりあえず最低限の要領はつかめたかと思います。テーマによって config.toml で設定できる項目が変わる部分など割と初見殺し要素がチラチラあったりする Hugo ですが、慣れるといろんな意味で楽になるのでオススメです。</p>
-
+<p>超ざっくり説明するとこんなところでしょうか。とりあえず最低限の要領はつかめたかと思います。テーマによって config.toml で設定できる項目が変わる部分など、割と初見殺し要素がチラチラあったりする Hugo ですが、慣れるといろんな意味で楽になるし、自分がブログを更新する上で、記事にどんな属性をもたせるべきか、どんなディレクトリ構成にする必要があるのかしっかり考えることができるのでオススメです。</p>
       </div>
     </section>
   </article>

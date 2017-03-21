@@ -7,6 +7,11 @@
   </url>
   
   <url>
+    <loc>http://yuyasvx.github.io/blog/guidelines/markdown-test/</loc>
+    <lastmod>2017-03-05T21:10:54+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yuyasvx.github.io/blog/post/2017/03/japanese-webfont/</loc>
     <lastmod>2017-03-05T01:34:43+09:00</lastmod>
   </url>
@@ -46,6 +51,12 @@
   </url>
   
   <url>
+    <loc>http://yuyasvx.github.io/blog/guidelines/</loc>
+    <lastmod>2017-03-05T21:10:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://yuyasvx.github.io/blog/tags/html/</loc>
     <lastmod>2017-03-06T00:17:31+09:00</lastmod>
     <priority>0</priority>
@@ -53,12 +64,6 @@
   
   <url>
     <loc>http://yuyasvx.github.io/blog/tags/hugo/</loc>
-    <lastmod>2017-03-06T00:17:31+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://yuyasvx.github.io/blog/subcategories/hugo/</loc>
     <lastmod>2017-03-06T00:17:31+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -82,7 +87,8 @@
   </url>
   
   <url>
-    <loc>http://yuyasvx.github.io/blog/subcategories/</loc>
+    <loc>http://yuyasvx.github.io/blog/tags/tag/</loc>
+    <lastmod>2017-03-05T21:10:54+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -94,6 +100,12 @@
   <url>
     <loc>http://yuyasvx.github.io/blog/categories/tech/</loc>
     <lastmod>2017-03-05T01:34:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuyasvx.github.io/blog/categories/text/</loc>
+    <lastmod>2017-03-05T21:10:54+09:00</lastmod>
     <priority>0</priority>
   </url>
   
