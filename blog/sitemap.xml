@@ -81,12 +81,6 @@
   </url>
   
   <url>
-    <loc>http://yuyasvx.github.io/blog/tags/ssg/</loc>
-    <lastmod>2017-03-06T00:17:31+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://yuyasvx.github.io/blog/tags/tag/</loc>
     <lastmod>2017-03-05T21:10:54+09:00</lastmod>
     <priority>0</priority>
@@ -122,6 +116,12 @@
   </url>
   
   <url>
+    <loc>http://yuyasvx.github.io/blog/tags/%E3%83%86%E3%83%BC%E3%83%9E%E4%BD%9C%E6%88%90%E3%81%AF%E3%82%82%E3%81%A3%E3%81%A8%E5%A5%A5%E6%B7%B1%E3%81%84/</loc>
+    <lastmod>2017-03-06T00:17:31+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://yuyasvx.github.io/blog/tags/%E3%83%96%E3%83%AD%E3%82%B0/</loc>
     <lastmod>2017-02-27T00:46:04+09:00</lastmod>
     <priority>0</priority>
@@ -142,6 +142,12 @@
   <url>
     <loc>http://yuyasvx.github.io/blog/tags/%E7%84%A1%E6%96%99/</loc>
     <lastmod>2017-03-05T01:34:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://yuyasvx.github.io/blog/tags/%E7%90%86%E8%A7%A3%E3%81%99%E3%82%8B%E3%81%BE%E3%81%A7%E3%81%8C%E5%A4%A7%E5%A4%89/</loc>
+    <lastmod>2017-03-06T00:17:31+09:00</lastmod>
     <priority>0</priority>
   </url>
   
