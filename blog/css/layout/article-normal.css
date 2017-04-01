@@ -77,7 +77,7 @@
 #single_article .frame-body .box-body p {
   margin: 0 0 20px 0;
   text-indent: 1em;
-  font-family: "Ryumin Regular KL JIS2004", "游明朝体", "HiraMinProN-W3", "Meiryo", sans-serif;
+  font-family: "Ryumin Regular KL JIS2004", "游明朝体", "HiraMinProN-W3", "Cardo", "Georgia", serif;
   font-style: normal;
   color: #000000;
   line-height: 1.7;
@@ -85,7 +85,7 @@
 
 #single_article .frame-body .box-body p b, #single_article .frame-body .box-body p strong {
   font-family: "Fira Sans", "source-han-sans-japanese", "YuGo-Medium", "YuGothic-Regular", "HiraginoSans-W3", "Meiryo", sans-serif;
-  font-style: bold;
+  font-style: 500;
 }
 
 #single_article .frame-body .box-body a {
