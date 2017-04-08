@@ -6,8 +6,142 @@
     <description>Recent content on Blog Extended</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 06 Mar 2017 00:17:31 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 05 Apr 2017 23:35:14 +0900</lastBuildDate>
     <atom:link href="http://yuyasvx.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CSS でリンクの下線をもっと自由に</title>
+      <link>http://yuyasvx.github.io/blog/post/2017/04/css-underline/</link>
+      <pubDate>Wed, 05 Apr 2017 23:35:14 +0900</pubDate>
+      
+      <guid>http://yuyasvx.github.io/blog/post/2017/04/css-underline/</guid>
+      <description>&lt;p&gt;CSS を使って、下線の太さだけを変えたり、文字色と下線の色を別々にしたい時とか割とあるあるな場面だと思うけど、決定打になるやり方ってなかなか見つからないと思っていた。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;よくある方法&#34;&gt;よくある方法&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;text-decoration: none;
+border-bottom: 1pt solid #333333;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;しかし・・・&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&#34;http://yuyasvx.github.io/blog/blog/images/2017-04-05-css-underline/ugly-underline.png&#34; alt=&#34;表示例&#34; /&gt;
+&lt;/figure&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;フォントによっては下線が下すぎる&lt;/li&gt;
+&lt;li&gt;y とか g のディセンダにかぶさらない → 和文と混ぜたときとか見た目がイケてない&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;del&gt;他のサイトのソースを見まくる&lt;/del&gt;調べてみると、次のような方法があることがわかった。&lt;/p&gt;
+
+&lt;h2 id=&#34;before-擬似クラスを下線にする作戦&#34;&gt;before 擬似クラスを下線にする作戦&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=“...”&amp;gt; リンクです &amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こんな時、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+a:before {
+  content: &amp;quot;&amp;quot;;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 2px; /*下線の高さ*/
+  box-sizing: border-box; /*ボーダーやパディングの分 はみでない*/
+  z-index: -2; /*下線は後ろ側に！*/
+  
+  /* 後はBackgroundを付けるなりご自由に*/
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こんな指定をしておく&lt;/p&gt;
+
+&lt;style&gt;
+    .bordertest {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      text-indent: 0;
+    }
+
+    .bordertest:before {
+      content: &#34;&#34;;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 4px;
+      height: 2px; /*下線の高さ*/
+      box-sizing: border-box; /*ボーダーやパディングの分 はみでない*/
+      z-index: -2; /*下線は後ろ側に！*/
+      background-color: #ddd;
+      width: 100%;
+    }
+&lt;/style&gt;
+
+
+&lt;p&gt;&lt;span class=&#34;bordertest&#34;&gt;どうですか？gyp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;いいところ：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;デザインの自由度が高い。
+
+&lt;ul&gt;
+&lt;li&gt;下線の位置とか見た目を細かく決められる&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;アニメーションとか作れる&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;微妙なところ：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;複数行にまたがった時、見た目が崩れたり下線が残念なことになる&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;inline-block&lt;/code&gt;の設定が曲者&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;linear-gradient-作戦&#34;&gt;linear gradient 作戦&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=“...”&amp;gt; リンクです &amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こんな時、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a {
+  background: linear-gradient(transparent 40%, #000000 40%)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こう指定する。&lt;/p&gt;
+
+&lt;style&gt;
+    .bordertest2 {
+      background: linear-gradient(transparent 80%, #CCCCCC 80%)
+    }
+&lt;/style&gt;
+
+
+&lt;p&gt;&lt;span class=&#34;bordertest2&#34;&gt;どうですか？gyp Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;いいところ：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;複数行でもちゃんと下線が引かれる。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;なんか色々考えているうちにこの方法がいちばん落ち着く気がした。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugoでお手軽ブログ構築</title>
